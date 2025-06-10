@@ -1,0 +1,198 @@
+/* Main container styling */
+.Hirebtnform {
+  height: 100vh auto;
+  width: 100%;
+  background: linear-gradient(135deg, #080f12, #203a43, #101619);
+  padding: 2rem;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Title */
+.Hirebtnform h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: orange;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Layout container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Button group container */
+.btngrpdiv {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  height: 80px;
+  width: 60%;
+  gap: 10px;
+  margin: 10px auto;
+}
+
+/* Pink accent button (animated grow) */
+.btnformdiv1 {
+  height: 60px;
+  flex: 1 1 30%;
+  border-radius: 25px;
+  background-color: #e3d9ec;
+  margin-top: 7px;
+  transition: flex 0.3s ease;
+}
+
+/* Blue secondary button */
+.btnformdiv2 {
+  height: 90px;
+  flex: 2 1 50%;
+  border-radius: 25px 25px 0 0;
+  background-color: #24e7d0;
+  transition: display 0.3s ease;
+}
+
+/* Glassmorphism panel */
+.btnformdiv3 {
+  min-height: 700px;
+  width: 60%;
+  margin: -14px auto;
+  border-radius: 25px 0 25px 25px;
+
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Form container (glass-style card) */
+.Homebtnformin {
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+/* Input form field spacing */
+.formsetdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Each form set */
+.formset {
+  display: flex;
+  flex-direction: column;
+  color:#000000;
+}
+
+/* Labels */
+.formset span {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 6px;
+  color:#ffffff;
+}
+
+/* Input, select, textarea styling */
+.formset input,
+.formset select,
+.formset textarea
+ {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: border 0.3s, box-shadow 0.3s, background-color 0.3s;
+  color: #000000;
+}
+
+.formset input:focus,
+.formset select:focus,
+.formset textarea:focus {
+  outline: none;
+  border-color: #91c9f7;
+  box-shadow: 0 0 0 4px rgba(145, 201, 247, 0.3);
+  background-color: #fff;
+}
+
+/* Textarea */
+.formset textarea {
+  resize: vertical;
+  min-height: 400px;
+}
+
+/* Select width handling */
+select {
+  width: auto;
+  min-width: 200px;
+}
+
+/* Responsive styles */
+@media screen and (min-width: 428px) and (max-width: 769px) {
+  .btnformdiv2 {
+    display: inline-block;
+  }
+
+  .btnformdiv3 {
+    border-radius: 25px 0px 25px 25px;
+  }
+
+  .btnformdiv3:hover,
+  .btnformdiv3:active {
+    border-radius: 25px 25px 25px 25px;
+  }
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.formsubmitset{
+    display: flex;
+    justify-content: end;
+}
+.btnformset{
+    padding:15px;
+    width:30%;
+    border-radius: 15px;
+    background-color: #755ce3;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  color:white;
+ font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 6px;
+}
+.reachme{
+  display: flex;
+  margin-top: 4px;
+  justify-content: space-around;
+}
+.reachme>img{
+  height:50px;
+  width:50px;
+}

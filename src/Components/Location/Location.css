@@ -1,0 +1,159 @@
+#Location{
+    min-height:100vh;
+    width:90%;
+ font-size: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin:0px auto 0px auto;
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   flex:1;
+   flex-wrap: wrap;
+   gap:5px;
+   background-color: #000000;
+}
+.navcontact{
+  margin-bottom:10%;
+  text-align: center;
+}
+.location-details{
+  flex:1;
+  height:90%;
+  border-radius: 10px;
+  padding:5px;
+  color:rgb(255, 255, 255);
+  background-color: #000000;
+}
+.contact-details{
+  flex:1;
+    /* padding:5px; */
+      height:90%;
+    border-radius: 10px;
+    gap:5px;
+  background-color: #16e3bd;
+  color:#000000;
+}
+.Forminputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  /* color:#000000; */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.inputflex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contactspan {
+  flex: 1 0 120px; /* min 120px, grows if needed */
+  font-weight:400;
+  color: #fff;
+}
+
+.inputflex input {
+  flex: 2 1 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(2, 2, 2);
+  outline: none;
+  transition: 0.3s;
+  font-size: large;
+}
+
+.inputflex input::placeholder {
+  color: #ccc;
+}
+
+.inputflex input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 5px #fff;
+}
+.textdetails{
+  min-height:5vw;
+  border-radius: 10px;
+  padding:5px;
+}
+@media screen and (max-width:800px) {
+.textdetails{
+  min-height:15vw;
+  border-radius: 10px;
+  padding:5px;
+}
+.contact-details{
+  font-size: 1.0em;
+}
+}
+.location-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+}
+.Locationcontainer{
+  display: flex;
+  flex-direction:column ;
+ flex:1;
+ width:100%;
+ justify-content: center;
+ align-items: center;
+}
+.Locationcontainer>iframe{
+  border-radius: 20px;
+  margin-bottom: 20px;
+  max-height: 400px;
+  max-width: 90%;
+}
+.locationdesc{
+  border-left: 4px solid rgb(0, 0, 0);
+  height:auto;
+  width:100%;
+  padding:10px;
+  color:rgb(255, 251, 251);
+  font-size: 0.7em;
+}
+.connect-number>p>img,.connectlocation>p>img,.connectsite>p>img,.connectemail>p>img{
+  height:25px;
+  width:25px;
+  margin-right:5px;
+}
+.submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(4, 4, 4);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px white;
+}
+.lochref{
+  text-decoration: none;
+  color: #fff;
+}
+.lochref:visited{
+  color:#fff;
+}

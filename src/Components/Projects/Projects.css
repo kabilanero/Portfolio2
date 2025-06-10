@@ -1,0 +1,158 @@
+/* Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#Projects {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #060607, #69667a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Outer Container */
+.projectcontainer {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+/* Header */
+.navprojects {
+  flex: 0 0 auto;
+  color: #36f2ad;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  padding-bottom: 2vh;
+}
+
+/* Main Content Area */
+.contentprojects {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+/* Top Project Block */
+.publicprojects {
+  flex: 1;
+  background-color: #010101;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  color:#eee;
+  justify-content: start;
+  gap:10%;
+  padding-left:5%;
+}
+
+
+/* Bottom Project Grid */
+.Selfprojects {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 0;
+}
+
+/* Card Styles Shared */
+.flipcards {
+  width: clamp(180px, 20vw, 250px);
+  height: clamp(180px, 20vw, 250px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+  color:black;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 1rem;
+  overflow:hidden;
+}
+
+/* Hover Animation */
+.flipcards:hover {
+  transform: scale(1.05);
+  clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition-duration: .5s ;
+}
+
+/* Alternating Designs */
+.flipcardA {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  color: #000;
+  margin-top:-100px auto ;
+    overflow:hidden;
+
+}
+
+.flipcardB {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #000;
+    margin-top: 100px auto ;
+      overflow:hidden;
+
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Selfprojects {
+    flex-direction: column;
+    gap: 2vh;
+  }
+  .contentprojects{
+    overflow: scroll;
+  }
+  .publicprojects {
+    flex: none;
+    flex-direction: column;
+    height: 30%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+  }
+
+  .flipcards {
+    width: 50vw;
+    min-height: 48vw;
+    margin-top: 4%;
+    
+  }
+}
+.flipcards p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.flipcards a {
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.flipcards a:ac {
+  background: #eee;
+}
+
