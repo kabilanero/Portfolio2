@@ -202,9 +202,9 @@
   color:rgb(12, 12, 12);
   font-size: 1.2em;
 }
-/* .navachieve>h1{
-  font-size:1.5em;
-} */
+.navachieve>h1{
+  font-size:1.8em;
+}
 .navachieve>p{
   margin-top:3%;
   position:absolute;

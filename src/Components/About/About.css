@@ -121,7 +121,7 @@
 }
 .workpath {
   width: 100%;
-  height: 450px;
+  min-height: 500px;
   border-radius: 40px;
   margin-top: 30px;
   color: black;
@@ -141,14 +141,18 @@
 
 .workitem {
   position: absolute;
+  height:auto;
   top: 50%;
   left: 50%;
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
   transform: translate(-50%, -50%);
 }
 
 .workitems {
-  height: 65px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   background-color: hsl(0, 44%, 57%);
   position: relative;
@@ -177,16 +181,31 @@
   pointer-events: none;
   transition: opacity 0.5s ease;
 }
-@media screen and (min-width:400px) and (max-width:800px) {
-  .aboutflipitems{
+@media screen and (max-width: 768px) {
+ 
+  
+  .aboutflipcards {
+    width: 100%; /* Full width on mobile */
     height:auto;
+    overflow-y: scroll;
+    margin: 10px 0; /* Vertical margin only */
+  }
+  
+  .workpath {
+    padding-bottom: 50px; /* More padding at bottom for content */
+    height: auto; /* Auto height */
+    display: flex;
+    overflow-y: scroll;
     flex-direction: column;
-    overflow-y: scroll;
   }
-  .about{
-    overflow-y: scroll;
-  }
+   .workitems{
+    top:-15px;
+   }
+  
+  
+
 }
+
 
 /* Show Cards on Hover */
 .workitems:hover + .aboutflipitems {
@@ -195,18 +214,7 @@
 }
 
 /* Individual Card */
-.aboutflipcards {
-  height: 200px;
-  width: 200px;
-  border-radius: 20px;
-background: linear-gradient(nulldeg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  color: white;
-  flex-shrink: 0;
-}
+
 
 .aboutflipcards::before {
   content: "";
@@ -231,7 +239,7 @@ background: linear-gradient(nulldeg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107,
   transform: scale(1.05);
 }
 .aboutflipcards {
-  height: 200px;
+  min-height: 200px;
   width: 200px;
   display: flex;
   justify-content: center;

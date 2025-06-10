@@ -123,8 +123,7 @@ function About() {
           <div className="aboutflipcards" key={i}>
               <h3>{Path.Title}</h3>
               <p>{Path.Name}</p>
-              <small>{Path.Grad}</small>
-          
+              <small>{Path.Grad}</small>          
           </div>
         ))}
       </div>

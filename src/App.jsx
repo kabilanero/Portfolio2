@@ -7,6 +7,7 @@ import Home from './Components/Home/Home';
 import Location from './Components/Location/Location';
 import Projects from './Components/Projects/Projects';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Skills from './Components/Skills/Skills';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <About />
             <Projects />
             <Achievements />
+            <Skills />
             <Location />
           </div>
          } />
