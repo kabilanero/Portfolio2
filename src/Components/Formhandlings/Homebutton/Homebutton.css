@@ -192,7 +192,7 @@ select {
   margin-top: 4px;
   justify-content: space-around;
 }
-.reachme>img{
+.reachme>a>img{
   height:50px;
   width:50px;
 }

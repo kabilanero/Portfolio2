@@ -85,7 +85,21 @@ function Homebutton() {
           <div
             className="btnformdiv1"
             style={{ flexGrow: isHovered ? 2 : 1 }}
-          > <div className="reachme"><img src={whatsapp} alt="" /><img src={github} alt="" /><img src={insta} alt="" /><img src={youtube} alt="" /></div></div>
+          > <div className="reachme">
+            <a href="https://wa.me/918608214689?text=Hi" target="_blank" rel="noopener noreferrer">
+  <img src={whatsapp} alt="WhatsApp" />
+</a>
+<a href="https://github.com/kabilanero" target="_blank" rel="noopener noreferrer">
+  <img src={github} alt="GitHub" />
+</a>
+<a href="" target="_blank" rel="noopener noreferrer">
+  <img src={insta} alt="Instagram" />
+</a>
+<a href="" target="_blank" rel="noopener noreferrer">
+  <img src={youtube} alt="YouTube" />
+</a>
+
+          </div></div>
           {!isHovered && <div className="btnformdiv2"></div>}
         </div>
 

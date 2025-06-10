@@ -15,7 +15,10 @@ const skills = [
   { name: "Java", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
   // New
   { name: "Notion", img: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
-  { name: "Canva", img: "https://static-00.iconduck.com/assets.00/canva-icon-2048x2048-9d6v0g9a.png" },
+{
+  name: "Canva",
+  img: "https://img.icons8.com/nolan/64/canva.png"
+},
   { name: "Redis", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
   { name: "Nginx", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" }
 ];
