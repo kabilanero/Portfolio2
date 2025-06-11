@@ -1,287 +1,289 @@
 .about{
-    min-height:100vh auto;
-    padding-top:2.5%;
- font-size: 2rem;
-  border-bottom: 1px solid rgb(240, 235, 235);
-  width:90%;
-  margin:20px auto;
-  border-top:  1px solid rgb(240, 235, 235);
-  overflow-x: hidden;
-  overflow-y: hidden;
+min-height:100vh auto;
+padding-top:2.5%;
+font-size: 2rem;
+border-bottom: 1px solid rgb(240, 235, 235);
+width:90%;
+margin:20px auto;
+border-top: 1px solid rgb(240, 235, 235);
+overflow-x: hidden;
+overflow-y: hidden;
 }
 
 .Abt-header{
- font-family:Arial, Helvetica, sans-serif;
- margin-left:5%;
- color:#ffb400;
+font-family:Arial, Helvetica, sans-serif;
+margin-left:5%;
+color:#ffb400;
 }
 
 .workstatus {
-  display: flex;
-  gap: 10px; /* adds space between dots */
+display: flex;
+gap: 10px; /* adds space between dots */
 }
 
 .work1, .work2, .work3, .work4 {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: #d064e3;
+height: 50px;
+width: 50px;
+border-radius: 50%;
+background-color: #d064e3;
 }
 .work1:hover, .work2:hover, .work3:hover, .work4:hover {
-  box-shadow: 0 0 12px 6px rgba(208, 100, 227, 0.5);
+box-shadow: 0 0 12px 6px rgba(208, 100, 227, 0.5);
 }
 .Services{
-  width:100%;
-  height: 300px;
-  background-color: #040404;
-  border-radius: 40px;
-  margin-top: 10px;
-  color:black;
+width:100%;
+height: 300px;
+background-color: #040404;
+border-radius: 40px;
+margin-top: 10px;
+color:black;
 }
 
 .Services {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 50px;
-  text-align: center;
-  box-shadow: 10px 10px 20px rgba(208, 100, 227, 0.5),
-                -10px -30px 40px rgba(62, 175, 193, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 50px;
+text-align: center;
+box-shadow: 10px 10px 20px rgba(208, 100, 227, 0.5),
+-10px -30px 40px rgba(62, 175, 193, 0.5);
 }
 
 .Constant {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .iam {
-  font-size: 50px;
-  margin-bottom: 10px;
-  color:aqua;
+font-size: 50px;
+margin-bottom: 10px;
+color:aqua;
 }
 
 .typewriter-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
 .type-item {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  font-size: 22px;
-  margin: 8px 0;
+opacity: 0;
+animation: fadeIn 1s forwards;
+font-size: 22px;
+margin: 8px 0;
 }
 
 /* Default: blinking with typing */
 .type-item span {
-  border-right: 2px solid #333;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-   font-weight: bold;
-  background: linear-gradient(90deg, #ff6ec4, #7873f5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: typing 1.5s steps(30, end), blink-caret 0.75s step-end infinite;
+border-right: 2px solid #333;
+white-space: nowrap;
+overflow: hidden;
+display: inline-block;
+font-weight: bold;
+background: linear-gradient(90deg, #ff6ec4, #7873f5);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: typing 1.5s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
 /* Disable blinking after typing is done for all */
 .stop-blink span {
-  animation: typing 1.5s steps(30, end);
-  border-right: none;
+animation: typing 1.5s steps(30, end);
+border-right: none;
 }
 
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+to {
+opacity: 1;
+}
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+from {
+width: 0;
+}
+to {
+width: 100%;
+}
 }
 
 @keyframes blink-caret {
-  50% {
-    border-color: transparent;
-  }
-  100%{
-      animation: typing 1.5s steps(30, end);
+50% {
+border-color: transparent;
+}
+100%{
+animation: typing 1.5s steps(30, end);
 
-  }
+}
 }
 .workpath {
-  width: 100%;
-  min-height: 500px;
-  border-radius: 40px;
-  margin-top: 30px;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
+width: 100%;
+min-height: 500px;
+border-radius: 40px;
+margin-top: 30px;
+color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+text-align: center;
 }
 
 .borderline {
-  height: 2px;
-  width: 85%;
-  background: radial-gradient(circle, rgba(58, 69, 189, 1) 0%, rgba(252, 70, 107, 1) 100%);
-  position: relative;
+height: 2px;
+width: 85%;
+background: radial-gradient(circle, rgba(58, 69, 189, 1) 0%, rgba(252, 70, 107, 1) 100%);
+position: relative;
 }
 
 .workitem {
-  position: absolute;
-  height:auto;
-  top: 50%;
-  left: 50%;
-  display: flex;
-  justify-content:space-around;
-  align-items:center;
-  transform: translate(-50%, -50%);
+position: absolute;
+height:auto;
+top: 50%;
+left: 50%;
+display: flex;
+justify-content:space-around;
+align-items:center;
+transform: translate(-50%, -50%);
 }
 
 .workitems {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: hsl(0, 44%, 57%);
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-  display: flex;
-  justify-content:center;
-  align-items: center;
+height: 50px;
+width: 50px;
+border-radius: 50%;
+background-color: hsl(0, 44%, 57%);
+position: relative;
+z-index: 2;
+cursor: pointer;
+display: flex;
+justify-content:center;
+align-items: center;
 
 }
 
 /* Flip Cards Container - Initially Hidden */
 .aboutflipitems {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-grow:1;
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1000px; /* or 100% if you want full width */
-  opacity: 0;
-  height:auto;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+flex-grow:1;
+position: absolute;
+top: 80px;
+left: 50%;
+transform: translateX(-50%);
+width: 1000px; /* or 100% if you want full width */
+opacity: 0;
+height:auto;
+pointer-events: none;
+transition: opacity 0.5s ease;
 }
 @media screen and (max-width: 768px) {
- 
-  
-  .aboutflipcards {
-    width: 100%; /* Full width on mobile */
-    height:auto;
-    overflow-y: scroll;
-    margin: 10px 0; /* Vertical margin only */
-  }
-  
-  .workpath {
-    padding-bottom: 50px; /* More padding at bottom for content */
-    height: auto; /* Auto height */
-    display: flex;
-    overflow-y: scroll;
-    flex-direction: column;
-  }
-   .workitems{
-    top:-15px;
-   }
-  
-  
+
+
+.aboutflipcards {
+width: 100%; /* Full width on mobile */
+height:auto;
+overflow-y: scroll;
+overflow-x: hidden;
+margin: 10px 0; /* Vertical margin only */
+}
+
+.workpath {
+padding-bottom: 50px; /* More padding at bottom for content */
+height: auto; /* Auto height */
+display: flex;
+overflow-y: scroll;
+flex-direction: column;
+overflow-x: hidden;
+}
+.workitems{
+top:-15px;
+}
+
+
 
 }
 
 
 /* Show Cards on Hover */
 .workitems:hover + .aboutflipitems {
-  opacity: 1;
-  pointer-events: auto;
+opacity: 1;
+pointer-events: auto;
 }
 
 /* Individual Card */
 
 
 .aboutflipcards::before {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 80%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6ec4, #7873f5);
-  border-radius: 2px;
-  transition: transform 0.4s ease, opacity 0.3s ease;
-  opacity: 0;
+content: "";
+position: absolute;
+bottom: -15px;
+left: 50%;
+transform: translateX(-50%) scaleX(0);
+width: 80%;
+height: 4px;
+background: linear-gradient(90deg, #ff6ec4, #7873f5);
+border-radius: 2px;
+transition: transform 0.4s ease, opacity 0.3s ease;
+opacity: 0;
 }
 
 .aboutflipcards:hover::before {
-  transform: translateX(-50%) scaleX(1);
-  opacity: 1;
-  box-shadow: 0 0 10px 3px rgba(255, 110, 196, 0.5);
+transform: translateX(-50%) scaleX(1);
+opacity: 1;
+box-shadow: 0 0 10px 3px rgba(255, 110, 196, 0.5);
 }
 .aboutflipcards:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 .aboutflipcards {
-  min-height: 200px;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 20px;
-  background-color: #1e1e1e; /* Dark card background */
-  box-shadow: 1px 5px 20px #31dfc8, -10px 5px 30px rgb(224, 36, 245);
-  color: #ffffff; /* Default text color */
-  transition: transform 0.6s ease-in-out;
-  padding: 20px;
+min-height: 200px;
+width: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+border-radius: 20px;
+background-color: #1e1e1e; /* Dark card background */
+box-shadow: 1px 5px 20px #31dfc8, -10px 5px 30px rgb(224, 36, 245);
+color: #ffffff; /* Default text color */
+transition: transform 0.6s ease-in-out;
+padding: 20px;
 }
 
 /* Title (e.g., College, Intern) */
 .aboutflipcards h3 {
-  color: #ffffff;
-  font-size: 1.4rem;
-  margin-bottom: 8px;
+color: #ffffff;
+font-size: 1.4rem;
+margin-bottom: 8px;
 }
 
 /* Name (e.g., GCE-Salem, Edureka) */
 .aboutflipcards p {
-  color: #00fff5;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 4px;
+color: #00fff5;
+font-size: 1.1rem;
+font-weight: bold;
+margin-bottom: 4px;
 }
 
 /* Grad / Role (e.g., Web-developer) */
 .aboutflipcards small {
-  color: #ffb400;
-  font-size: 0.9rem;
-  font-weight: 600;
+color: #ffb400;
+font-size: 0.9rem;
+font-weight: 600;
 }
 @media screen and (max-width: 600px){
-      .aboutflipitems{
-        flex-direction: column;
-      }
-     
+.aboutflipitems{
+flex-direction: column;
+}
+
 }
 .clickfile{
-  height:50px;
-  width:50px;
-  border-radius: 35px;
+height:50px;
+width:50px;
+border-radius: 35px;
 }

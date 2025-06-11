@@ -14,7 +14,7 @@ function Location() {
     'Mobile-number': '',
     Description: ''
   });
-
+const [enquirysubmission,setenquirySubmissions]=useState([])
   // Handle input changes
   const handleChange = (e, field) => {
     setQuerydata(prev => ({
@@ -22,18 +22,54 @@ function Location() {
       [field]: e.target.value
     })); 
   };
+   
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log('Form submitted:', querydata);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', querydata);
-    // Here, you can send this data to your backend, or store it locally.
-  };
+  try {
+    const response = await fetch("http://localhost:5000/api/querybusinessideas", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(querydata),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      console.log("✅ Success:", result.message || "Form submitted!");
+      setenquirySubmissions(prev => [...prev, querydata]);
+
+      // Reset form
+      setQuerydata({
+        Email: '',
+        Name: '',
+        'Mobile-number': '',
+        Description: ''
+      });
+    } else {
+      console.error("❌ Error:", result.message);
+      alert("Submission failed. Try again.");
+    }
+
+  } catch (error) {
+    console.error("❌ Network error:", error);
+    alert("Server error. Please try again later.");
+  }
+};
+
+
+  
+  
 
   return (
     <div id="Location">
       <div className="location-details">
         <div className="navlocation">
           <h2>location</h2>
+          
         </div>
         <div className="Locationcontainer">
           <iframe

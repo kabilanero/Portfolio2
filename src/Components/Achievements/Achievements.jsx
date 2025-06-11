@@ -11,7 +11,7 @@ import Bookingsystem from './Booking system.png'
 import Travelbooking from './Travel.mp4'
 import Enquiry from './Enquiry.webp'
 import money from './money.png'
-
+import partypopper  from './icons8-party-popper.gif'
 
 
 function Achievements() {
@@ -219,6 +219,7 @@ function Achievements() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
