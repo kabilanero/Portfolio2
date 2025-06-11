@@ -11,7 +11,7 @@ import Skills from './Components/Skills/Skills';
 
 function App() {
   return (
-    <BrowserRouter basename="/Portfolio2/">
+    <BrowserRouter >
       <Routes>
         {/* Homepage route (your main layout) */}
         <Route path="/" element={
