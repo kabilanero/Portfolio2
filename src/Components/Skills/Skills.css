@@ -1,10 +1,3 @@
-/* body {
-  background: #e0eafc;
-  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
-  min-height: 100vh;
-  font-family: 'Segoe UI', Arial, sans-serif;
-} */
-
 .skills-bg {
   min-height: 100vh;
   width: 100vw;
@@ -17,7 +10,7 @@
   gap: 4vh;
 }
 
-.glass-section {
+.skills-glass-section {
   width: 80vw;
   max-width: 900px;
   min-width: 320px;
@@ -38,7 +31,7 @@
   overflow: hidden;
 }
 
-.glass-title {
+.skills-glass-title {
   font-size: 2.1rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -47,12 +40,12 @@
   margin-bottom: 18px;
 }
 
-.techstacks-infinite {
+.skills-techstacks-infinite {
   width: 80%;
   margin: 0 auto;
   margin-top: 10px;
 }
-.techstacks-row {
+.skills-techstacks-row {
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 14px;
@@ -61,24 +54,24 @@
   display: flex;
   align-items: center;
 }
-.techstacks-scroll {
+.skills-techstacks-scroll {
   display: inline-block;
 }
-.techstacks-scroll.left {
-  animation: scroll-left 20s linear infinite;
+.skills-techstacks-scroll.left {
+  animation: skills-scroll-left 20s linear infinite;
 }
-.techstacks-scroll.right {
-  animation: scroll-right 25s linear infinite;
+.skills-techstacks-scroll.right {
+  animation: skills-scroll-right 25s linear infinite;
 }
-@keyframes scroll-left {
+@keyframes skills-scroll-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-@keyframes scroll-right {
+@keyframes skills-scroll-right {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
-.skill-card-glass {
+.skills-skill-card-glass {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -96,13 +89,13 @@
   cursor: pointer;
   user-select: none;
 }
-.skill-card-glass:hover {
+.skills-skill-card-glass:hover {
   transform: scale(1.06) rotate(-2deg);
   background: rgba(255,255,255,0.8);
   box-shadow: 0 4px 20px #a0c4ff44;
   border-color: #a0c4ff;
 }
-.skill-icon {
+.skills-skill-icon {
   width: 32px;
   height: 32px;
   filter: drop-shadow(0 2px 6px #b3c6e7aa);
@@ -111,7 +104,7 @@
   padding: 2px;
 }
 
-.review-section {
+.skills-review-section {
   margin-top: 2vh;
   display: flex;
   height:auto;
@@ -120,19 +113,62 @@
   width: 100%;
 }
 
-.reviewsflipcards-stack-glass {
-  width: 80%;
+/* --- Carousel Styles for Reviews Section --- */
+.skills-carousel-container {
+  width: 100%;
   max-width: 420px;
   margin: 0 auto 18px auto;
-  min-height: 120px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
   align-items: center;
+  position: relative;
+}
+.skills-carousel-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 160px;
+  position: relative;
+}
+.skills-carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #38b6ff;
+  cursor: pointer;
+  padding: 0 18px;
+  transition: color 0.2s, transform 0.2s;
+  user-select: none;
   z-index: 2;
+  outline: none;
+}
+.skills-carousel-arrow:hover,
+.skills-carousel-arrow:focus {
+  color: #1976d2;
+  transform: scale(1.2);
+}
+.skills-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 12px;
+}
+.skills-carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #b3c6e7;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.skills-carousel-dot.active {
+  background: #38b6ff;
+  transform: scale(1.2);
 }
 
-.flipcard-glass {
+.skills-flipcard-glass {
   width: 100%;
   background: rgba(255,255,255,0.55);
   border-radius: 18px;
@@ -144,10 +180,16 @@
   justify-content: center;
   min-height: 90px;
   margin-bottom: 0;
-  transition: box-shadow 0.2s, border 0.2s;
+  transition: box-shadow 0.2s, border 0.2s, opacity 0.3s;
   position: relative;
+  opacity: 1;
+  animation: skills-fadeIn 0.4s;
 }
-.flipcard-front-glass {
+@keyframes skills-fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.skills-flipcard-front-glass {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -155,33 +197,68 @@
   padding: 18px 12px;
   text-align: center;
 }
-.star-glass {
-  color: #ffd200;
+
+.skills-star-glass {
   font-size: 1.5em;
   margin-bottom: 6px;
   letter-spacing: 2px;
-  text-shadow: 0 2px 8px #ffd20033;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
 }
-.star-fade {
+
+.skills-rating-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  margin-top: 6px;
+  font-size: 2em;
+  user-select: none;
+}
+
+.skills-rating-icons .skills-icon,
+.skills-star-glass .skills-icon {
   color: #eee;
-  opacity: 0.7;
+  transition: color 0.2s, transform 0.1s;
+  text-shadow: 0 1px 4px #fff5;
+  cursor: pointer;
+  outline: none;
 }
-.reviewsdetails-glass {
+.skills-rating-icons .skills-icon.filled,
+.skills-star-glass .skills-icon.filled {
+  color: #ff4b6e; /* For hearts */
+  /* color: #ffd200; For stars */
+  text-shadow: 0 2px 8px #ffd20033;
+}
+.skills-rating-icons .skills-icon:hover,
+.skills-rating-icons .skills-icon:focus {
+  color: #d81b60;
+  transform: scale(1.15);
+}
+.skills-rating-icons .skills-icon.filled:hover,
+.skills-rating-icons .skills-icon.filled:focus {
+  color: #d81b60;
+}
+
+.skills-reviewsdetails-glass {
   font-size: 1.08em;
   margin-bottom: 7px;
   color: #222;
   font-weight: 500;
   text-shadow: 0 1px 4px #fff5;
 }
-.reviewer-glass {
+.skills-reviewer-glass {
   font-size: 1em;
   color: #38b6ff;
   font-weight: bold;
   text-shadow: 0 1px 4px #38b6ff33;
 }
 
-.review-btn-glass {
+.skills-review-btn-glass {
   padding: 10px 26px;
   border: none;
   background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -195,13 +272,13 @@
   border: 1.5px solid #b3c6e7;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
-.review-btn-glass:hover {
+.skills-review-btn-glass:hover {
   background: linear-gradient(90deg, #c2e9fb 0%, #a1c4fd 100%);
   color: #1976d2;
   box-shadow: 0 4px 20px #b3c6e7aa;
 }
 
-.reviewform-glass {
+.skills-reviewform-glass {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -220,7 +297,7 @@
   justify-content: center;
 }
 
-.review-input {
+.skills-review-input {
   width: 100%;
   padding: 12px 14px;
   border-radius: 9px;
@@ -232,12 +309,12 @@
   box-shadow: 0 1px 4px #b3c6e733;
   transition: box-shadow 0.2s, background 0.2s;
 }
-.review-input:focus {
+.skills-review-input:focus {
   background: #e0eafc;
   box-shadow: 0 0 0 2px #a1c4fd, 0 2px 12px #a1c4fd44;
 }
 
-.reviewform-btn {
+.skills-reviewform-btn {
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -249,56 +326,56 @@
   box-shadow: 0 2px 8px #a1c4fd44;
   transition: background 0.2s, color 0.2s;
 }
-.reviewform-btn:hover {
+.skills-reviewform-btn:hover {
   background: linear-gradient(90deg, #c2e9fb 0%, #a1c4fd 100%);
   color: #1976d2;
 }
-.reviewform-btn.cancel {
+.skills-reviewform-btn.cancel {
   background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
   color: #7b1fa2;
 }
-.reviewform-btn.cancel:hover {
+.skills-reviewform-btn.cancel:hover {
   background: linear-gradient(90deg, #a6c1ee 0%, #fbc2eb 100%);
   color: #d81b60;
 }
 
 @media (max-width: 900px) {
-  .glass-section {
+  .skills-glass-section {
     width: 92vw;
     min-width: 0;
     padding: 20px 0 0 0;
   }
-  .reviewsflipcards-stack-glass {
+  .skills-carousel-container {
     width: 97vw;
     max-width: 420px;
   }
 }
 @media (max-width: 600px) {
-  .glass-section {
+  .skills-glass-section {
     height: auto;
     min-height: 320px;
     padding: 12px 0 0 0;
   }
-  .glass-title {
+  .skills-glass-title {
     font-size: 1.2rem;
   }
-  .techstacks-row {
+  .skills-techstacks-row {
     height: 44px;
   }
-  .skill-card-glass {
+  .skills-skill-card-glass {
     padding: 7px 12px;
     margin: 0 6px;
     font-size: 0.92em;
   }
-  .skill-icon {
+  .skills-skill-icon {
     width: 22px;
     height: 22px;
   }
-  .reviewsflipcards-stack-glass {
+  .skills-carousel-container {
     width: 98vw;
     max-width: 99vw;
   }
-  .reviewform-glass {
+  .skills-reviewform-glass {
     padding: 16px 6px;
   }
 }

@@ -7,6 +7,11 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'dist',
   },
+  server: {
+    proxy: {
+      '/api': 'http://localhost:5000'
+    }
+  },
 }));
 
 

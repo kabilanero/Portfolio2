@@ -170,7 +170,7 @@
 .Productoffers>li{
  display: inline-block;
  margin-left: 5%;
- font-size:large;
+ font-size:1.3em;
 }}
 /* Responsive */
 @media screen and (min-width: 480px) and (max-width: 768px) {
